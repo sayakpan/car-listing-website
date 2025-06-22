@@ -4,7 +4,6 @@ import CarDetailPageClient from "./CarDetailPageClient"
 export async function generateMetadata({ params }) {
   const { slug } = await params
   const car = getCarBySlug(slug)
-  console.log(car);
 
   if (!car) {
     return {

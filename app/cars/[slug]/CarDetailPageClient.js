@@ -7,7 +7,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
-import Navbar from "@/components/navbar"
 import { getCarBySlug, formatPrice } from "@/lib/cars-data"
 import { notFound } from "next/navigation"
 
@@ -85,8 +84,6 @@ export default function CarDetailPageClient({ slug }) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
 
       <div className="min-h-screen bg-gray-50">
-        <Navbar />
-
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {/* Back Button */}
           <Link href="/cars" className="inline-flex items-center text-primary hover:text-primary/80 mb-6">
@@ -94,7 +91,7 @@ export default function CarDetailPageClient({ slug }) {
             Back to Cars
           </Link>
 
-          <div className="grid lg:grid-cols-2 gap-8 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
             {/* Car Image */}
             <div className="space-y-4">
               <div className="relative overflow-hidden rounded-lg">
@@ -144,10 +141,10 @@ export default function CarDetailPageClient({ slug }) {
               </div>
 
               <div className="flex gap-4">
-                <Button size="lg" className="flex-1">
+                <Button size="sm" className="flex-1">
                   Contact Dealer
                 </Button>
-                <Button size="lg" variant="outline" className="flex-1">
+                <Button size="sm" variant="outline" className="flex-1">
                   Schedule Test Drive
                 </Button>
               </div>

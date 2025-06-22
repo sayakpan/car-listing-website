@@ -27,7 +27,7 @@ export default function CarCard({ car, index }) {
             src={car.image || "/placeholder.svg"}
             alt={`${car.brand} ${car.model}`}
             title={`${car.brand} ${car.model}`}
-            width={400}
+            width={300}
             height={280}
             className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-110"
           />
